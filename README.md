@@ -1,4 +1,4 @@
-# - react pose w/ express
+# react pose w/ express
 ### react-pose,express, react, babel, webpack
 according to the tutorial on [qiita](https://qiita.com/akirakudo/items/77c3cd49e2bf39da79dd).
 - install
