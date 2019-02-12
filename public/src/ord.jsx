@@ -6,7 +6,7 @@ import styled from "styled-components";
 import shuffle from "./shuffle.js";
 
 const Container = styled.div`
-  height: 100vh;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;

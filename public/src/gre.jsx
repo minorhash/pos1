@@ -2,26 +2,20 @@ import React from "react";
 import { render } from "react-dom";
 import posed from "react-pose";
 import styled from "styled-components";
-import { tween } from "popmotion";
+import { progress } from '@popmotion/popcorn';
 
 const Container = styled.div`
-  height: 200px;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
+//progress(100, -100, 50); // 0.25
+
 const Square = posed.div({
-  idle: {
-    scale: 1,
-    opacity: 0.1,
-    transition: props => tween({ ...props, duration: 2000 })
-  },
-  hovered: {
-    scale: 5,
-    opacity: 1,
-    transition: props => tween({ ...props, duration: 1000 })
-  }
+  idle: { scale: 1 },
+  hovered: { scale: 1.5 }
 });
 
 const StyledSquare = styled(Square)`
@@ -46,4 +40,5 @@ class App extends React.Component {
   }
 }
 
-render(<App />, document.getElementById("fad"));
+render(<App />, document.getElementById("app"));
+
