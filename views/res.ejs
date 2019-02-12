@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <%include par/head %>
+    <%include par/nav%>
+  <body>
+
+<div class="container-fluid">
+
+<div class="row">
+  <div class="col" style="background-color:white">
+<div class="card">
+<div class="card-body">
+<h3 align="center"><%= title %></h3>
+</div><!-- card-body -->
+</div><!-- card -->
+</div><!-- col -->
+</div>    <!-- row -->
+
+<div class="row">
+
+<div class="col-md-2" style="background-color:lavender">
+<form action="/edit-<%=par%>" method="post">
+<input type="hidden" name="pos" value="3487">
+<button type="submit" class="btn btn-primary">edit</button>
+</form>
+<br>
+<form action="/del-<%=par%>" method="post">
+<input type="hidden" name="pos" value="3487">
+<button type="submit" class="btn btn-primary">del</button>
+</form>
+</div><!-- col2 -->
+
+  <div class="col-md-10" style="background-color:white">
+<%if(typblo){%>
+
+<table class="table">
+
+    <tr class="table-info"><td>type</td><td>term</td>
+    </tr>
+
+<tr><td>
+<%= typblo.type%>
+            
+  </td><td>
+<%= typblo.term %>
+  </td></tr>
+<tr class="table-light"><td colspan="2">
+<a target="_blank" href="<%= typblo.link %>"><%= typblo.link %></a>
+</td></tr>
+<tr class="table-light"><td colspan="2">
+<div class="card">
+<textarea class="form-control" rows="12" cols="110" name="bod" ><%= typblo.body %></textarea>
+</div>
+</td></tr>
+</table>
+
+
+      <%}else{%>      no post      <%}%>
+      <br>
+
+  </div><!-- col 10 -->
+    
+</div><!-- row end -->
+</div><!-- col end -->
+
+</body>
+</html>
