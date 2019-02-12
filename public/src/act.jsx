@@ -10,13 +10,21 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-const Square = posed.div({
-x: -10,
-  y: -10,
-  background: 'rgba(161, 0, 246, 1)',
-  boxShadow: '10px 10px 20px rgba(161, 0, 246, 0.2)',
-  transition: { duration: 700 }
-});
+
+const config = {
+  off: {
+    opacity: 0.5,
+    scale: 1
+  },
+  on: {
+    opacity: 1,
+    scale: 2
+  }
+};
+
+const Square = posed.div(
+config
+);
 
 const StyledSquare = styled(Square)`
   width: 100px;
@@ -25,12 +33,13 @@ const StyledSquare = styled(Square)`
 `;
 
 class App extends React.Component {
-  state = { hovering: false };
 
   render() {
     return (
       <Container>
         <StyledSquare
+pose={this.state.hovered? 'on' : 'off'}
+
         />
       </Container>
     );
