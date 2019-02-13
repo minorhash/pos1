@@ -11,11 +11,11 @@ const Container = styled.div`
 `;
 
 const Square = posed.div({
-  idle: { scale: 1 },
-  hovered: { scale: 1.5 }
+idle: { scale: 1 },
+hovered: { scale: 1.5 }
 });
 
-const StyledSquare = styled(Square)`
+const SSquare = styled(Square)`
   width: 100px;
   height: 100px;
   background: red;
@@ -27,7 +27,7 @@ class App extends React.Component {
   render() {
     return (
       <Container>
-        <Square
+        <SSquare
           pose={this.state.hovering ? "hovered" : "idle"}
           onMouseEnter={() => this.setState({ hovering: true })}
           onMouseLeave={() => this.setState({ hovering: false })}

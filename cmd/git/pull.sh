@@ -1,5 +1,5 @@
 #br=$(git rev-parse --abbrev-ref HEAD)
-echo $br
+#echo $br
 
-git pull origin
+git pull origin master
 
