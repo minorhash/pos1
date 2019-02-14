@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./public/src/el.jsx");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./public/src/com.jsx");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -229,15 +229,15 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 
 /***/ }),
 
-/***/ "./public/src/el.jsx":
-/*!***************************!*\
-  !*** ./public/src/el.jsx ***!
-  \***************************/
+/***/ "./public/src/com.jsx":
+/*!****************************!*\
+  !*** ./public/src/com.jsx ***!
+  \****************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nvar el = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"h1\", null, \"Hello, world!\"));\nObject(react_dom__WEBPACK_IMPORTED_MODULE_1__[\"render\"])(el, document.getElementById('root'));\n\n//# sourceURL=webpack:///./public/src/el.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n\nfunction Wel(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"h1\", null, \"Hello, \", props.name);\n}\n\nvar el = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Wel, {\n  name: \"Sara\"\n});\nObject(react_dom__WEBPACK_IMPORTED_MODULE_1__[\"render\"])(el, document.getElementById('root'));\n\n//# sourceURL=webpack:///./public/src/com.jsx?");
 
 /***/ })
 

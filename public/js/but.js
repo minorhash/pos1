@@ -1,5 +1,6 @@
-$(document).ready(function(){
-  $("button").click(function(){
-    $("#but").animate({left: '250px'});
-  });
+$("#my").hover(function(){
+  $(this).css("background-color", "yellow");
+  }, function(){
+  $(this).css("background-color", "pink");
 });
+

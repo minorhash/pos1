@@ -1,3 +1,16 @@
+const pose={
+  fullscreen: {
+    width: "100vw",
+    height: "100vh",
+    transition: tween
+},
+  idle: {
+    width: 100,
+    height: 100,
+    transition: tween
+}
+}
+
 import React from "react";
 import { render } from "react-dom";
 import posed, { PoseGroup } from "react-pose";
@@ -17,18 +30,7 @@ const Btn = styled.button`
   position: absolute;
 `;
 
-const Square = posed.div({
-  fullscreen: {
-    width: "100vw",
-    height: "100vh",
-    transition: tween
-  },
-  idle: {
-    width: 100,
-    height: 100,
-    transition: tween
-  }
-});
+const Square = posed.div(pose);
 
 const StyledSquare = styled(Square)`
   background: red;
@@ -55,7 +57,7 @@ class App extends React.Component {
           onClick={() => this.setState({ active: true })}
         />
         {this.state.active && (
-          <Btn type="button" onClick={() => this.setState({ active: false })}>
+          <Btn className="btn btn-warning" type="button" onClick={() => this.setState({ active: false })}>
             Close!
           </Btn>
         )}

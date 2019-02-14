@@ -2,32 +2,21 @@ import React from "react";
 import { render } from "react-dom";
 import posed from "react-pose";
 import styled from "styled-components";
-import { tween } from "popmotion";
+import cnf from "./js/cnf.js"
 
 const Container = styled.div`
-  height: 200px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
-const Square = posed.div({
-  idle: {
-    scale: 1,
-    opacity: 0.1,
-    transition: props => tween({ ...props, duration: 2000 })
-  },
-  hovered: {
-    scale: 5,
-    opacity: 1,
-    transition: props => tween({ ...props, duration: 1000 })
-  }
-});
+const Square = posed.div(cnf);
 
-const StyledSquare = styled(Square)`
-  width: 100px;
-  height: 100px;
-  background: red;
+const SSquare = styled(Square)`
+width: 100px;
+height: 100px;
+background: red;
 `;
 
 class App extends React.Component {
@@ -36,7 +25,7 @@ class App extends React.Component {
   render() {
     return (
       <Container>
-        <StyledSquare
+        <SSquare
           pose={this.state.hovering ? "hovered" : "idle"}
           onMouseEnter={() => this.setState({ hovering: true })}
           onMouseLeave={() => this.setState({ hovering: false })}
@@ -46,4 +35,5 @@ class App extends React.Component {
   }
 }
 
-render(<App />, document.getElementById("fad"));
+render(<App />, document.getElementById("act"));
+
